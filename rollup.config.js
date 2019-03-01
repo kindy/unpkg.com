@@ -4,7 +4,7 @@ const path = require('path');
 const builtinModules = require('module').builtinModules;
 const babel = require('rollup-plugin-babel');
 const commonjs = require('rollup-plugin-commonjs');
-const compiler = require('@ampproject/rollup-plugin-closure-compiler');
+// const compiler = require('@ampproject/rollup-plugin-closure-compiler');
 const json = require('rollup-plugin-json');
 const replace = require('rollup-plugin-replace');
 const resolve = require('rollup-plugin-node-resolve');
@@ -56,7 +56,7 @@ const client = ['main', 'autoIndex'].map(entryName => {
         limit: 5 * 1024,
         publicPath: '/_client/'
       }),
-      compiler(dev ? { formatting: 'PRETTY_PRINT' } : undefined)
+      // compiler(dev ? { formatting: 'PRETTY_PRINT' } : undefined)
     ]
   };
 });

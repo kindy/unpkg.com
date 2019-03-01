@@ -7,12 +7,12 @@ const cloudflareURL = 'https://api.cloudflare.com/client/v4';
 const cloudflareEmail = process.env.CLOUDFLARE_EMAIL;
 const cloudflareKey = process.env.CLOUDFLARE_KEY;
 
-invariant(
+false && invariant(
   cloudflareEmail,
   'Missing the $CLOUDFLARE_EMAIL environment variable'
 );
 
-invariant(cloudflareKey, 'Missing the $CLOUDFLARE_KEY environment variable');
+false && invariant(cloudflareKey, 'Missing the $CLOUDFLARE_KEY environment variable');
 
 export function get(path, headers) {
   return fetch(`${cloudflareURL}${path}`, {
